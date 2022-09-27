@@ -3,32 +3,37 @@ package proyecto1;
 public class DocTributario {
     private String numero, rut;
     private Date fecha;
+    private Direccion;
 
     public DocTributario() {
     
     }
     
     public String getNumero() {
-
+        return numero;
     } 
 
-    public void setNumero() {
-
+    public void setNumero(String n) {
+        numero = n;
     }
 
     public String getRut() {
-
+        return rut;
     }
 
-    public void setRut() {
-
+    public void setRut(String r) {
+        rut = r;
     }
 
     public Date getFecha() {
-
+        return fecha;
     }
 
-    public void setFecha() {
+    public void setFecha(Date f) {
+        fecha = f;
+    }
+
+    public String toString() {
 
     }
 }
