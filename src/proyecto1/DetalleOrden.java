@@ -42,6 +42,7 @@ class Articulo {
 	}
 
 	public String toString() {
+        return "Articulo: " + nombre + ". Descripcion: " + descripcion + ". Peso: " + peso + ". Precio: " + precio;
 	}
 }
 
@@ -58,6 +59,7 @@ public class DetalleOrden {
 	}
 
 	public String toString() {
+        return "Cantidad: " + cantidad;
 	}
 
 	public float calcPrecio() {

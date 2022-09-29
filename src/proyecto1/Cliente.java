@@ -2,10 +2,10 @@ package proyecto1;
 
 public class Cliente {
     private String nombre, rut;
-    private Direccion;
 
     public Cliente() {
-
+        nombre = null;
+        rut = null;
     }
 
     public String getNombre() {
@@ -25,6 +25,7 @@ public class Cliente {
     }
 
     public String toString() {
+        return "Nombre del cliente: " + nombre + ". Rut: " + rut;
 
     }
 }
@@ -32,9 +33,7 @@ public class Cliente {
 public class Direccion {
     private String direccion;
 
-    public Direccion() {
-
-    }
+    public Direccion() {}
 
     public String getDireccion() {
         return direccion;
@@ -42,5 +41,9 @@ public class Direccion {
 
     public void setDireccion(String d) {
         direccion = d;
+    }
+
+    public String toString() {
+        return "Direccion: " + direccion;
     }
 }

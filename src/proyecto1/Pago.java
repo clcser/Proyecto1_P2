@@ -28,7 +28,8 @@ public class Pago {
 	}
 
 	public String toString() {
-	}
+        return "Monto: " + monto + ". Fecha: " + fecha;
+    }
 }
 
 class Efectivo extends Pago {
@@ -57,6 +58,10 @@ class Transferencia extends Pago {
 
 	public void setNumCuenta(String numCuenta) {
 	}
+
+    public String toString() {
+        return super.toString() + ". Banco: " + banco + ". Numero de cuenta: " + numCuenta;
+    }
 }
 
 class Tarjeta extends Pago {
@@ -77,4 +82,8 @@ class Tarjeta extends Pago {
 
 	public void setNumTransaccion(String numTransaccion) {
 	}
+
+    public String toString() {
+        return super.toString() + ". Tipo: " + tipo + ". Numero de Transaccion: " + numTransaccion;
+    }
 }

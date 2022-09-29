@@ -3,10 +3,11 @@ package proyecto1;
 public class DocTributario {
     private String numero, rut;
     private Date fecha;
-    private Direccion;
 
     public DocTributario() {
-    
+        numero = null;
+        rut = null;
+        fecha = new Date();
     }
     
     public String getNumero() {
@@ -34,7 +35,7 @@ public class DocTributario {
     }
 
     public String toString() {
-
+        return "Boleta numero: " + numero + ". Rut del cliente: " + rut + ". Fecha: " + fecha;
     }
 }
 
