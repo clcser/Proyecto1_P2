@@ -18,31 +18,39 @@ class Articulo {
 	}
 
 	public float getPeso() {
+                return peso;
 	}
 
 	public void setPeso(float peso) {
+                this.peso = peso;
 	}
 
 	public String getNombre() {
+                return nombre;
 	}
 
 	public void setNombre(String nombre) {
+                this.nombre = nombre;
 	}
 
 	private String getDescripcion() {
+                return descripcion;
 	}
 
 	private void setDescripcion(String descripcion) {
+                this.descripcion = descripcion;
 	}
 
 	private float getPrecio() {
+                return precio;
 	}
 
 	private void setPrecio(float precio) {
+                this.precio = precio;
 	}
 
 	public String toString() {
-        return "Articulo: " + nombre + ". Descripcion: " + descripcion + ". Peso: " + peso + ". Precio: " + precio;
+                return "Articulo: " + nombre + ". Descripcion: " + descripcion + ". Peso: " + peso + ". Precio: " + precio;
 	}
 }
 
@@ -53,13 +61,15 @@ public class DetalleOrden {
 	}
 
 	public int getCantidad() {
+                return cantidad;
 	}
 
 	public void setCantidad(int cantidad) {
+                this.cantidad = cantidad;
 	}
 
 	public String toString() {
-        return "Cantidad: " + cantidad;
+                return "Cantidad: " + cantidad;
 	}
 
 	public float calcPrecio() {
