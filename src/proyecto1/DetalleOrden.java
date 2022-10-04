@@ -4,6 +4,8 @@
  */
 package proyecto1;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author clau
@@ -14,7 +16,11 @@ class Articulo {
 	private String descripcion;
 	private float precio;
 
-	public Articulo() {
+	public Articulo(float peso, String nombre, String descripcion, float precio) {
+            this.peso = peso;
+            this.nombre = nombre;
+            this.descripcion = descipcion;
+            this.precio = precio;
 	}
 
 	public float getPeso() {
@@ -50,14 +56,18 @@ class Articulo {
 	}
 
 	public String toString() {
-                return "Articulo: " + nombre + ". Descripcion: " + descripcion + ". Peso: " + peso + ". Precio: " + precio;
+                return "Articulo: " + nombre + ". Descripcion: " + descripcion + ". Peso: " + peso + ". Precio: " + precio + ".";
 	}
 }
 
 public class DetalleOrden {
 	private int cantidad;
+        private ArrayList<Articulo> articulos;
 
-	public DetalleOrden() {
+	public DetalleOrden(ArrayList<Articulo> a) {
+            cantidad = a.length;
+
+            articulos = a;
 	}
 
 	public int getCantidad() {
@@ -73,14 +83,46 @@ public class DetalleOrden {
 	}
 
 	public float calcPrecio() {
+            float sum = 0;
+
+            for (int i = 0; i < articulos.length; i++) {
+                sum += articulos[i].getPrecio();
+            }
+
+            return sum;
 	}
 
 	public float calcPrecioSinIVA() {
+            return calcPrecio() - calcIVA();
 	}
 
 	public float calcIVA() {
+            float sum = 0;
+
+            for (int i = 0; i < articulos.length; i++) {
+                sum += articulos[i].getPrecio() / 1.19;
+            }
+
+            return sum;
 	}
 
 	public float calcPeso() {
+            float sum = 0;
+
+            for (int i = 0; i < articulos.length; i++) {
+                sum += articulos[i].getPeso();
+            }
+
+            return sum;
 	}
+
+        public String toString() {
+            String str = "Cantidad: " + cantidad + "\n";
+
+            for (int i = 0; i < articulos.length; i++) {
+                str += Articulo.toString() + "\n";
+            }
+
+            return str;
+        }
 }
