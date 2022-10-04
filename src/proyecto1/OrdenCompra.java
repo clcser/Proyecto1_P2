@@ -5,28 +5,43 @@ public class OrdenCompra {
     private String estado;
     private DetalleOrden detalleOrden;
     private DocTributario docTributario;
+    private ArrayList<Pago> pagos;
+    private ArrayLists<DetalleOrden> detalles;
 
-    public OrdenCompra() {}
+    public OrdenCompra() {
+        pagos = new ArrayList<Pago>();
+    }
 
-    public float calcPrecioSinIVA() {}
-    public float calcIVA() {}
-    public float calcPrecio() {}
-    public float calcPeso() {}
+    public float calcPrecioSinIVA() {
+        return detalleOrden.calcPrecioSinIVA();
+    }
+
+    public float calcIVA() {
+        return detalleOrden.calcIVA();
+    }
+
+    public float calcPrecio() {
+        return detalleOrden.calcPrecio();
+    }
+
+    public float calcPeso() {
+        return detalleOrden.calcPeso();
+    }
 
     public Date getFecha() {
         return fecha;
     }
 
-    public void setFecha(Date d) {
-        fecha = d;
+    public void setFecha(Date fecha) {
+        this.fecha = fecha;
     }
 
     public String getEstado() {
         return estado;
     }
 
-    public void setEstado(String e) {
-        estado = e;
+    public void setEstado(String estado) {
+        this.estado = estado;
     }
 
     public String toString() {
