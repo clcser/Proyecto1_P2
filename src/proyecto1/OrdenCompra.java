@@ -13,13 +13,23 @@ public class OrdenCompra {
     public float calcPrecio() {}
     public float calcPeso() {}
 
-    public Date getFecha() {}
-    public void setFecha(Date d) {}
-    public String getEstado() {}
-    public void setEstado(String e) {}
+    public Date getFecha() {
+        return fecha;
+    }
+
+    public void setFecha(Date fecha) {
+        this.fecha = fecha;
+    }
+
+    public String getEstado() {
+        return estado;
+    }
+
+    public void setEstado(String estado) {
+        this.estado = estado;
+    }
 
     public String toString() {
         return "Fecha: " + fecha + ". Estado: " + " Detalle de la orden: " + detalleOrden.toString() + ". Documento Tributario: " + docTributario.toString();
     }
-
 }

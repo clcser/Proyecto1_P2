@@ -1,6 +1,6 @@
 package proyecto1;
 
-public class DocTributario {
+abstract public class DocTributario {
     private String numero, rut;
     private Date fecha;
 

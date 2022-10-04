@@ -54,6 +54,7 @@ class Transferencia extends Pago {
 	}
 
 	public String getNumCuenta() {
+
 	}
 
 	public void setNumCuenta(String numCuenta) {
