@@ -78,10 +78,6 @@ public class DetalleOrden {
                 this.cantidad = cantidad;
 	}
 
-	public String toString() {
-                return "Cantidad: " + cantidad;
-	}
-
 	public float calcPrecio() {
             float sum = 0;
 
