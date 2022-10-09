@@ -64,7 +64,7 @@ public class DetalleOrden {
 	private int cantidad;
         private Articulo articulo;
 
-	public DetalleOrden(OrdenCompra oc, int cantidad, Articulo articulo) {
+	public DetalleOrden(int cantidad, Articulo articulo) {
                 this.cantidad = cantidad;
                 this.articulo = articulo;
 	}

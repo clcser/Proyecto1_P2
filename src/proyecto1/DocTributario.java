@@ -1,9 +1,15 @@
 package proyecto1;
 
 abstract class DocTributario {
-    protected String numero, rut;
-    protected Date fecha;
-    
+    private String numero, rut;
+    private Date fecha;
+
+    public DocTributario(String n, String r, Date f) {
+            numero = n;
+            rut = r;
+            fecha = f;
+    }
+
     public String getNumero() {
         return numero;
     }
@@ -28,32 +34,26 @@ abstract class DocTributario {
     }
 
     public String toString() {
-        return "Boleta numero: " + numero + ". Rut del cliente: " + rut + ". Fecha: " + fecha;
+        return "Numero: " + numero + ". Rut del cliente: " + rut + ". Fecha: " + fecha;
     }
 }
 
 class Boleta extends DocTributario {
-    public Boleta(String n, OrdenCompra orden) {
-        super();
-        numero = n;
-        rut = ; // añadir rut desde la orden
-        fecha = ; // fecha de la orden
+    public Boleta(String n, String r, Date f) {
+            super(n, r, f);
     }
 
     public String toString() {
-        return "Boleta " + numero + "\nRut del cliente: " + rut + "\nFecha: " + fecha;
+            return super.toString();
     }
 }
 
 class Factura extends DocTributario {
-    public Factura(String n, OrdenCompra orden) {
-        super();
-        numero = n;
-        rut = ; // añadir rut desde la orden
-        fecha = ; // fecha de la orden
+    public Factura(String n, String r, Date f) {
+        super(n, r, f);
     }
 
     public String toString() {
-        return "Factura " + numero + "\nRut del cliente: " + rut + "\nFecha: " + fecha;
+            return super.toString();
     }
 }
