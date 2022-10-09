@@ -1,6 +1,6 @@
 package proyecto1;
 
-public class Cliente {
+class Cliente {
     private String nombre, rut;
     private Direccion direccion;
 
@@ -26,7 +26,7 @@ public class Cliente {
         rut = r;
     }
 
-    public String getDireccion() {
+    public Direccion getDireccion() {
         return direccion;
     }
 
@@ -39,7 +39,7 @@ public class Cliente {
     }
 }
 
-public class Direccion {
+class Direccion {
     private String direccion;
 
     public Direccion(String direccion) {

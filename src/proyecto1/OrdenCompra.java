@@ -2,7 +2,7 @@ package proyecto1;
 
 import java.util.ArrayList;
 
-public class OrdenCompra {
+class OrdenCompra {
         private Date fecha;
         private String estado;
         private Cliente cliente;

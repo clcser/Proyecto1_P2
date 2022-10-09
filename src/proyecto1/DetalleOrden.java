@@ -17,7 +17,7 @@ class Articulo {
 	public Articulo(float peso, String nombre, String descripcion, float precio) {
             this.peso = peso;
             this.nombre = nombre;
-            this.descripcion = descipcion;
+            this.descripcion = descripcion;
             this.precio = precio;
 	}
 
@@ -58,7 +58,7 @@ class Articulo {
 	}
 }
 
-public class DetalleOrden {
+class DetalleOrden {
 	private int cantidad;
         private Articulo articulo;
 
@@ -88,7 +88,7 @@ public class DetalleOrden {
 	}
 
 	public float calcPrecioSinIVA() {
-                return this.calcPrecio() / 1.19;
+                return this.calcPrecio() / 1.19f;
 	}
 
 	public float calcIVA() {

@@ -3,12 +3,13 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package proyecto1;
+import java.util.Date;
 
 /**
  *
  * @author clau
  */
-public class Pago {
+class Pago {
 	private float monto;
 	private Date fecha;
 

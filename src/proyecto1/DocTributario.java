@@ -1,4 +1,5 @@
 package proyecto1;
+import java.util.Date;
 
 abstract class DocTributario {
     private String numero, rut;
