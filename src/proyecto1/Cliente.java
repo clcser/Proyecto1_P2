@@ -20,7 +20,7 @@ public class Cliente {
     }
 
     public String getRut() {
-        reutn rut;
+        return rut;
     }
 
     public void setRut(String r) {
@@ -31,22 +31,20 @@ public class Cliente {
         return direccion;
     }
 
-    public void setDireccion(Srting d) {
+    public void setDireccion(String d) {
         direccion.setDireccion(d);
     }
 
     public String toString() {
-        return "Nombre del cliente: " + nombre + ". Rut: " + rut + direccion + "\n";
+        return "Nombre del cliente: " + nombre + ". Rut: " + rut + ". " + direccion.toString();
     }
 }
 
 public class Direccion {
-    private ArrayList<Cliente> clientes;
     private String direccion;
 
     public Direccion(String direccion) {
         this.direccion = direccion;
-        clientes = new ArrayList<Cliente>;
     }
 
     public String getDireccion() {
@@ -57,16 +55,7 @@ public class Direccion {
         direccion = d;
     }
 
-    public void addCliente(Cliente c) {
-        clientes.add(c);
-    }
-
     public String toString() {
-        String totClientes = "";
-        for(int i = 0; i < clientes.size(); i++) {
-            totClientes +=  "    - " + clientes[i] + "\n"; 
-        }
-
-        return "Direccion: " + direccion + "\n" + "    Clientes:\n" + totClientes + "\n";
+        return "Direccion: " + direccion;
     }
 }
