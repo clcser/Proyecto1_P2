@@ -4,8 +4,6 @@
  */
 package proyecto1;
 
-import java.util.ArrayList;
-
 /**
  *
  * @author clau
