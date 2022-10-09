@@ -29,6 +29,6 @@ class Tarjeta extends Pago {
 	}
 
         public String toString() {
-                return super.toString() + ". Tipo: " + tipo + ". Numero de Transaccion: " + numTransaccion;
+                return super.toString() + "    Tipo: " + tipo + "\n    Numero de Transaccion: " + numTransaccion;
         }
 }

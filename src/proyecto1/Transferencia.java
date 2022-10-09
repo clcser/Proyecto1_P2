@@ -29,6 +29,6 @@ class Transferencia extends Pago {
 	}
 
         public String toString() {
-                return super.toString() + ". Banco: " + banco + ". Numero de cuenta: " + numCuenta;
+                return super.toString() + "    Banco: " + banco + "\n    Numero de cuenta: " + numCuenta;
         }
 }

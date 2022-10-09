@@ -28,6 +28,6 @@ class Pago {
 	}
 
 	public String toString() {
-                return "    Monto: " + monto + "\n    Fecha: " + fecha;
+                return "    Monto: " + monto + "\n    Fecha: " + fecha + "\n";
         }
 }
