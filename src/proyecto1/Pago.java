@@ -12,7 +12,9 @@ public class Pago {
 	private float monto;
 	private Date fecha;
 
-	public Pago () {
+	public Pago (float monto, Date fecha) {
+                this.monto = monto;
+                this.fecha = fecha;
 	}
 
 	public float getMonto() {
@@ -37,10 +39,12 @@ public class Pago {
 }
 
 class Efectivo extends Pago {
-	public Efectivo () {
+	public Efectivo (float monto, Date fecha) {
+                super(monto, fecha);
 	}
 
-	public float calcDevolucion() {
+	public float calcDevolucion(OrdenCompra oc) {
+                return oc.calcPrecio() - super.getMonto();
 	}
 }
 
@@ -48,7 +52,10 @@ class Transferencia extends Pago {
 	private String banco;
 	private String numCuenta;
 
-	public Transferencia() {
+	public Transferencia(float monto, Date fecha, String banco, String numCuenta) {
+                super(monto, fecha);
+                this.banco = banco;
+                this.numCuenta = numCuenta;
 	}
 
 	public String getBanco() {
@@ -76,7 +83,10 @@ class Tarjeta extends Pago {
 	private String tipo;
 	private String numTransaccion;
 
-	public Tarjeta() {
+	public Tarjeta(float monto, Date fecha, String tipo, String numTransaccion) {
+                super(monto, fecha);
+                this.tipo = tipo;
+                this.numTransaccion = numTransaccion;
 	}
 
 	public String getTipo() {
