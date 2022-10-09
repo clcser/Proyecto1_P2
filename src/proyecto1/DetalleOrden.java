@@ -39,19 +39,19 @@ class Articulo {
                 this.nombre = nombre;
 	}
 
-	private String getDescripcion() {
+	public String getDescripcion() {
                 return descripcion;
 	}
 
-	private void setDescripcion(String descripcion) {
+	public void setDescripcion(String descripcion) {
                 this.descripcion = descripcion;
 	}
 
-	private float getPrecio() {
+	public float getPrecio() {
                 return precio;
 	}
 
-	private void setPrecio(float precio) {
+	public void setPrecio(float precio) {
                 this.precio = precio;
 	}
 
@@ -62,12 +62,11 @@ class Articulo {
 
 public class DetalleOrden {
 	private int cantidad;
-        private ArrayList<Articulo> articulos;
+        private Articulo articulo;
 
-	public DetalleOrden(ArrayList<Articulo> a) {
-            cantidad = a.length;
-
-            articulos = a;
+	public DetalleOrden(OrdenCompra oc, int cantidad, Articulo articulo) {
+                this.cantidad = cantidad;
+                this.articulo = articulo;
 	}
 
 	public int getCantidad() {
@@ -78,47 +77,31 @@ public class DetalleOrden {
                 this.cantidad = cantidad;
 	}
 
+        public Articulo getArticulo() {
+                return articulo;
+        }
+
+        public void setArticulo(Articulo articulo) {
+                this.articulo = articulo;
+        }
+
 	public float calcPrecio() {
-            float sum = 0;
-
-            for (int i = 0; i < articulos.length; i++) {
-                sum += articulos[i].getPrecio();
-            }
-
-            return sum;
+                return cantidad * articulo.getPrecio();
 	}
 
 	public float calcPrecioSinIVA() {
-            return calcPrecio() - calcIVA();
+                return this.calcPrecio() / 1.19;
 	}
 
 	public float calcIVA() {
-            float sum = 0;
-
-            for (int i = 0; i < articulos.length; i++) {
-                sum += articulos[i].getPrecio() / 1.19;
-            }
-
-            return sum;
+                return this.calcPrecio() - this.calcPrecioSinIVA();
 	}
 
 	public float calcPeso() {
-            float sum = 0;
-
-            for (int i = 0; i < articulos.length; i++) {
-                sum += articulos[i].getPeso();
-            }
-
-            return sum;
+                return cantidad * articulo.getPeso();
 	}
 
         public String toString() {
-            String str = "Cantidad: " + cantidad + "\n";
-
-            for (int i = 0; i < articulos.length; i++) {
-                str += Articulo.toString() + "\n";
-            }
-
-            return str;
+                return "Detalle Orden: " + cantidad + "\n" + articulo.toString();
         }
 }
