@@ -6,7 +6,6 @@ public class OrdenCompra {
         private Date fecha;
         private String estado;
         private Cliente cliente;
-        private DetalleOrden detalleOrden;
         private DocTributario docTributario;
         private ArrayList<Pago> pagos;
         private ArrayLists<DetalleOrden> detalles;
@@ -27,6 +26,16 @@ public class OrdenCompra {
                 DetalleOrden detOrd = new DetalleOrden(cantidad, articulo);
 
                 detalles.add(detOrd);
+        }
+
+        // Implementing off-time paying behaviour and DetalleOrden modifications post creation
+
+        public void pay(Pago p) {
+                pagos.add(p);
+        }
+
+        public void addDetalle(DetalleOrden d) {
+                detalles.add(d);
         }
 
         public float calcPrecioSinIVA() {
@@ -86,6 +95,16 @@ public class OrdenCompra {
         }
 
         public String toString() {
-                return "Fecha: " + fecha + ". Estado: " + " Detalle de la orden: " + detalleOrden.toString() + ". Documento Tributario: " + docTributario.toString();
+                String str = "Cliente: " cliente.toString() + ". Fecha: " + fecha + ". Estado: " estado + ". Documento Tributario: " + docTributario.toString() + "\n";
+
+                for (int i = 0; i < pagos.length; i++) {
+                        str += pagos[i].toString() + "\n";
+                }
+
+                for (int i = 0; i < detalles.length; i++) {
+                        str += detalles[i].toString();
+                }
+
+                return str;
         }
 }
