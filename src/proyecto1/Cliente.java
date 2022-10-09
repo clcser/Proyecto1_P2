@@ -1,13 +1,11 @@
-package proyecto1;
-
 class Cliente {
     private String nombre, rut;
     private Direccion direccion;
 
-    public Cliente(String nombre, String rut, String direccion) {
+    public Cliente(String nombre, String rut, Direccion direccion) {
         this.nombre = nombre;
         this.rut = rut;
-        this.direccion = new Direccion(direccion);
+        this.direccion = direccion;
     }
 
     public String getNombre() {
@@ -36,25 +34,5 @@ class Cliente {
 
     public String toString() {
         return "Nombre del cliente: " + nombre + ". Rut: " + rut + ". " + direccion.toString();
-    }
-}
-
-class Direccion {
-    private String direccion;
-
-    public Direccion(String direccion) {
-        this.direccion = direccion;
-    }
-
-    public String getDireccion() {
-        return direccion;
-    }
-
-    public void setDireccion(String d) {
-        direccion = d;
-    }
-
-    public String toString() {
-        return "Direccion: " + direccion;
     }
 }

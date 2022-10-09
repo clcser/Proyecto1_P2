@@ -1,4 +1,4 @@
-package proyecto1;
+import java.util.Date;
 
 public class Proyecto1 {
 
@@ -12,22 +12,28 @@ public class Proyecto1 {
             Cliente leo = new Cliente("Leonardo", "8128", leoDir);
             Cliente clau = new Cliente("Claudia", "496", clauDir);
 
-            Articulo libro = new Articulo(0.2, "Elements de Mathematique", "Bourbaki", 50);
-            Articulo pelota = new Articulo(0.3, "Volley", "Pelota de Volley", 60);
-            Articulo blusa = new Articulo(0.1, "Blusa", "Blusa suave azul", 30);
-            Articulo marcador = new Articulo(0.05, "V5 Pilot", "Marcador Pilot", 5);
-            Articulo cama = new Articulo(20, "Superior Excelence", "La mejor cama", 1200);
+            Articulo libro = new Articulo(0.2f, "Elements de Mathematique", "Bourbaki", 50f);
+            Articulo pelota = new Articulo(0.3f, "Volley", "Pelota de Volley", 60f);
+            Articulo blusa = new Articulo(0.1f, "Blusa", "Blusa suave azul", 30f);
+            Articulo marcador = new Articulo(0.05f, "V5 Pilot", "Marcador Pilot", 5f);
+            Articulo cama = new Articulo(20f, "Superior Excelence", "La mejor cama", 1200f);
 
             Date fecha = new Date();
 
-            Efectivo p1 = new Efectivo(50, fecha);
-            Tarjeta p2 = new Tarjeta(110, "Debito", "168");
-            Tarjeta p3 = new Tarjeta(30, "Debito", "169");
+            Boleta b = new Boleta("123", leo.getRut(), fecha);
+            Factura f1 = new Factura("124", clau.getRut(), fecha);
+            Factura f2 = new Factura("126", clau.getRut(), fecha);
 
-            OrdenCompra oc1 = new OrdenCompra(leo, fecha, "En reparto", "123", 1, libro, p1);
-            OrdenCompra oc2 = new OrdenCompra(clau, fecha, "En reparto", "124", 2, pelota, p2);
-            OrdenCompra oc3 = new OrdenCompra(clau, fecha, "En reparto", "126", 6, marcador, p3);
+            Efectivo p1 = new Efectivo(50f, fecha);
+            Tarjeta p2 = new Tarjeta(110f, fecha, "Debito", "168");
+            Tarjeta p3 = new Tarjeta(30f, fecha, "Debito", "169");
+
+            OrdenCompra oc1 = new OrdenCompra(leo, fecha, "En reparto", b, 1, libro, p1);
+            OrdenCompra oc2 = new OrdenCompra(clau, fecha, "En reparto", f1, 2, pelota, p2);
+            OrdenCompra oc3 = new OrdenCompra(clau, fecha, "En reparto", f2, 6, marcador, p3);
 
             System.out.println(oc1.toString());
+            System.out.println(oc2.toString());
+            System.out.println(oc3.toString());
     }
 }

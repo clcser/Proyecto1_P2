@@ -1,6 +1,5 @@
-package proyecto1;
-
 import java.util.ArrayList;
+import java.util.Date;
 
 class OrdenCompra {
         private Date fecha;
@@ -8,14 +7,13 @@ class OrdenCompra {
         private Cliente cliente;
         private DocTributario docTributario;
         private ArrayList<Pago> pagos;
-        private ArrayLists<DetalleOrden> detalles;
+        private ArrayList<DetalleOrden> detalles;
 
-        public OrdenCompra(Cliente cliente, Date fecha, String estado, String num, int cantidad, Articulo articulo, Pago p) {
+        public OrdenCompra(Cliente cliente, Date fecha, String estado, DocTributario dt, int cantidad, Articulo articulo, Pago p) {
                 this.cliente = cliente;
                 this.fecha = fecha;
                 this.estado = estado;
-
-                docTributario = new DocTributario(num, cliente.getRut(), fecha);
+                docTributario = dt;
 
                 pagos = new ArrayList<Pago>();
 
@@ -39,40 +37,40 @@ class OrdenCompra {
         }
 
         public float calcPrecioSinIVA() {
-                float sum = 0.0;
+                float sum = 0.0f;
 
-                for (int i = 0; i < detalles.length; i++) {
-                        sum += detalles[i].calcPrecioSinIVA();
+                for (int i = 0; i < detalles.size(); i++) {
+                        sum += detalles.get(i).calcPrecioSinIVA();
                 }
 
                 return sum;
         }
 
         public float calcIVA() {
-                float sum = 0.0;
+                float sum = 0.0f;
 
-                for (int i = 0; i < detalles.length; i++) {
-                        sum += detalles[i].calcIVA();
+                for (int i = 0; i < detalles.size(); i++) {
+                        sum += detalles.get(i).calcIVA();
                 }
 
                 return sum;
         }
 
         public float calcPrecio() {
-                float sum = 0.0;
+                float sum = 0.0f;
 
-                for (int i = 0; i < detalles.length; i++) {
-                        sum += detalles[i].calcPrecio();
+                for (int i = 0; i < detalles.size(); i++) {
+                        sum += detalles.get(i).calcPrecio();
                 }
 
                 return sum;
         }
 
         public float calcPeso() {
-                float sum = 0.0;
+                float sum = 0.0f;
 
-                for (int i = 0; i < detalles.length; i++) {
-                        sum += detalles[i].calcPeso();
+                for (int i = 0; i < detalles.size(); i++) {
+                        sum += detalles.get(i).calcPeso();
                 }
 
                 return sum;
@@ -95,14 +93,14 @@ class OrdenCompra {
         }
 
         public String toString() {
-                String str = "Cliente: " cliente.toString() + ". Fecha: " + fecha + ". Estado: " estado + ". Documento Tributario: " + docTributario.toString() + "\n";
+                String str = "Cliente: " + cliente.toString() + ". Fecha: " + fecha + ". Estado: " + estado + ". Documento Tributario: " + docTributario.toString() + "\n";
 
-                for (int i = 0; i < pagos.length; i++) {
-                        str += pagos[i].toString() + "\n";
+                for (int i = 0; i < pagos.size(); i++) {
+                        str += pagos.get(i).toString() + "\n";
                 }
 
-                for (int i = 0; i < detalles.length; i++) {
-                        str += detalles[i].toString();
+                for (int i = 0; i < detalles.size(); i++) {
+                        str += detalles.get(i).toString();
                 }
 
                 return str;

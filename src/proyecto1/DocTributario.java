@@ -1,4 +1,3 @@
-package proyecto1;
 import java.util.Date;
 
 abstract class DocTributario {
@@ -36,25 +35,5 @@ abstract class DocTributario {
 
     public String toString() {
         return "Numero: " + numero + ". Rut del cliente: " + rut + ". Fecha: " + fecha;
-    }
-}
-
-class Boleta extends DocTributario {
-    public Boleta(String n, String r, Date f) {
-            super(n, r, f);
-    }
-
-    public String toString() {
-            return super.toString();
-    }
-}
-
-class Factura extends DocTributario {
-    public Factura(String n, String r, Date f) {
-        super(n, r, f);
-    }
-
-    public String toString() {
-            return super.toString();
     }
 }
