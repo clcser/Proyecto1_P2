@@ -1,10 +1,8 @@
+package proyecto1;
+
 import java.util.Date;
 
 public class Proyecto1 {
-
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
             Direccion leoDir = new Direccion("Rd. Euler, Basel");
             Direccion clauDir = new Direccion("Av. Yumbel, Los Angeles");

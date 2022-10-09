@@ -1,3 +1,5 @@
+package proyecto1;
+
 class Direccion {
     private String direccion;
 

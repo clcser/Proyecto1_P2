@@ -1,3 +1,5 @@
+package proyecto1;
+
 import java.util.Date;
 
 abstract class DocTributario {
@@ -34,6 +36,7 @@ abstract class DocTributario {
     }
 
     public String toString() {
-        return "Numero: " + numero + ". Rut del cliente: " + rut + ". Fecha: " + fecha;
+        return "\n    Numero: " + numero + "\n    Rut del cliente: " + rut + 
+                "\n    Fecha: " + fecha + "\n";
     }
 }

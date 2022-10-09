@@ -1,3 +1,5 @@
+package proyecto1;
+
 class Articulo {
 	private float peso;
 	private String nombre;
@@ -44,6 +46,6 @@ class Articulo {
 	}
 
 	public String toString() {
-                return "Articulo: " + nombre + ". Descripcion: " + descripcion + ". Peso: " + peso + ". Precio: " + precio + ".";
+                return "\n        Nombre: " + nombre + "\n        Descripcion: " + descripcion + "\n        Peso: " + peso + "\n    Precio: " + precio + ".";
 	}
 }

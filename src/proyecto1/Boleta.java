@@ -1,3 +1,5 @@
+package proyecto1;
+
 import java.util.Date;
 
 class Boleta extends DocTributario {
@@ -6,6 +8,6 @@ class Boleta extends DocTributario {
     }
 
     public String toString() {
-            return super.toString();
+            return "\n    Tipo: Boleta" + super.toString();
     }
 }

@@ -1,3 +1,5 @@
+package proyecto1;
+
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -93,16 +95,17 @@ class OrdenCompra {
         }
 
         public String toString() {
-                String str = "Cliente: " + cliente.toString() + ". Fecha: " + fecha + ". Estado: " + estado + ". Documento Tributario: " + docTributario.toString() + "\n";
+                String str = "Cliente: " + cliente.toString() + "Fecha: " + fecha + "\nEstado: " 
+                        + estado + "\nDocumento Tributario: " + docTributario.toString();
 
                 for (int i = 0; i < pagos.size(); i++) {
-                        str += pagos.get(i).toString() + "\n";
+                        str += "Pago " + i+1 + ":\n" + pagos.get(i).toString() + "\n";
                 }
 
                 for (int i = 0; i < detalles.size(); i++) {
-                        str += detalles.get(i).toString();
+                        str += detalles.get(i).toString() + "\n";
                 }
 
-                return str;
+                return str + "\n";
         }
 }

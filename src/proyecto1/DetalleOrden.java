@@ -1,12 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-
-/**
- *
- * @author clau
- */
+package proyecto1;
 
 class DetalleOrden {
 	private int cantidad;
@@ -50,6 +42,6 @@ class DetalleOrden {
 	}
 
         public String toString() {
-                return "Detalle Orden: " + cantidad + "\n" + articulo.toString();
+                return "Detalle Orden: " + "\n    Articulo: " + articulo.toString() + "\n    Cantidad: " + cantidad;
         }
 }

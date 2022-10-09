@@ -1,3 +1,5 @@
+package proyecto1;
+
 class Cliente {
     private String nombre, rut;
     private Direccion direccion;
@@ -33,6 +35,7 @@ class Cliente {
     }
 
     public String toString() {
-        return "Nombre del cliente: " + nombre + ". Rut: " + rut + ". " + direccion.toString();
+        return "\n    Nombre: " + nombre + "\n    Rut: " + rut 
+                + "\n    Direccion: " + direccion.toString() + "\n";
     }
 }

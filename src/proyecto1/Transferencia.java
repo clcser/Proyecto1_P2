@@ -1,3 +1,5 @@
+package proyecto1;
+
 import java.util.Date;
 
 class Transferencia extends Pago {
