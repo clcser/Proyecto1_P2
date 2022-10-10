@@ -1,76 +1,47 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package proyecto1;
 
-/**
- *
- * @author clau
- */
-class Articulo {
-	private float peso;
-	private String nombre;
-	private String descripcion;
-	private float precio;
-
-	public Articulo() {
-	}
-
-	public float getPeso() {
-	}
-
-	public void setPeso(float peso) {
-	}
-
-	public String getNombre() {
-	}
-
-	public void setNombre(String nombre) {
-	}
-
-	private String getDescripcion() {
-	}
-
-	private void setDescripcion(String descripcion) {
-	}
-
-	private float getPrecio() {
-	}
-
-	private void setPrecio(float precio) {
-	}
-
-	public String toString() {
-        return "Articulo: " + nombre + ". Descripcion: " + descripcion + ". Peso: " + peso + ". Precio: " + precio;
-	}
-}
-
-public class DetalleOrden {
+class DetalleOrden {
 	private int cantidad;
+        private Articulo articulo;
 
-	public DetalleOrden() {
+	public DetalleOrden(int cantidad, Articulo articulo) {
+                this.cantidad = cantidad;
+                this.articulo = articulo;
 	}
 
 	public int getCantidad() {
+                return cantidad;
 	}
 
 	public void setCantidad(int cantidad) {
+                this.cantidad = cantidad;
 	}
 
-	public String toString() {
-        return "Cantidad: " + cantidad;
-	}
+        public Articulo getArticulo() {
+                return articulo;
+        }
+
+        public void setArticulo(Articulo articulo) {
+                this.articulo = articulo;
+        }
 
 	public float calcPrecio() {
+                return cantidad * articulo.getPrecio();
 	}
 
 	public float calcPrecioSinIVA() {
+                return this.calcPrecio() / 1.19f;
 	}
 
 	public float calcIVA() {
+                return this.calcPrecio() - this.calcPrecioSinIVA();
 	}
 
 	public float calcPeso() {
+                return cantidad * articulo.getPeso();
 	}
+
+        public String toString() {
+                return "Detalle Orden: " + "\n    Articulo: " + articulo.toString() + "\n    Cantidad: " + cantidad;
+        }
 }

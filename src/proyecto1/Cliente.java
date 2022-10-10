@@ -1,11 +1,13 @@
 package proyecto1;
 
-public class Cliente {
+class Cliente {
     private String nombre, rut;
+    private Direccion direccion;
 
-    public Cliente() {
-        nombre = null;
-        rut = null;
+    public Cliente(String nombre, String rut, Direccion direccion) {
+        this.nombre = nombre;
+        this.rut = rut;
+        this.direccion = direccion;
     }
 
     public String getNombre() {
@@ -17,33 +19,23 @@ public class Cliente {
     }
 
     public String getRut() {
-        reutn rut;
+        return rut;
     }
 
     public void setRut(String r) {
         rut = r;
     }
 
-    public String toString() {
-        return "Nombre del cliente: " + nombre + ". Rut: " + rut;
-
-    }
-}
-
-public class Direccion {
-    private String direccion;
-
-    public Direccion() {}
-
-    public String getDireccion() {
+    public Direccion getDireccion() {
         return direccion;
     }
 
     public void setDireccion(String d) {
-        direccion = d;
+        direccion.setDireccion(d);
     }
 
     public String toString() {
-        return "Direccion: " + direccion;
+        return "\n    Nombre: " + nombre + "\n    Rut: " + rut 
+                + "\n    Direccion: " + direccion.toString() + "\n";
     }
 }

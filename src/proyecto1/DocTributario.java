@@ -1,19 +1,24 @@
 package proyecto1;
 
+<<<<<<< HEAD
+import java.util.Date;
+
+abstract class DocTributario {
+=======
 abstract public class DocTributario {
+>>>>>>> master
     private String numero, rut;
     private Date fecha;
 
-    public DocTributario() {
-        numero = null;
-        rut = null;
-        fecha = new Date();
+    public DocTributario(String n, String r, Date f) {
+            numero = n;
+            rut = r;
+            fecha = f;
     }
-    
+
     public String getNumero() {
         return numero;
-    } 
-
+    }
     public void setNumero(String n) {
         numero = n;
     }
@@ -35,18 +40,7 @@ abstract public class DocTributario {
     }
 
     public String toString() {
-        return "Boleta numero: " + numero + ". Rut del cliente: " + rut + ". Fecha: " + fecha;
-    }
-}
-
-class Boleta extends DocTributario {
-    public Boleta() {
-
-    }
-}
-
-class Factura extends DocTributario {
-    public Factura() {
-
+        return "\n    Numero: " + numero + "\n    Rut del cliente: " + rut + 
+                "\n    Fecha: " + fecha + "\n";
     }
 }
