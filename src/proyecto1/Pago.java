@@ -28,6 +28,69 @@ class Pago {
 	}
 
 	public String toString() {
+<<<<<<< HEAD
                 return "    Monto: " + monto + "\n    Fecha: " + fecha + "\n";
         }
 }
+=======
+        return "Monto: " + monto + ". Fecha: " + fecha;
+    }
+}
+
+class Efectivo extends Pago {
+	public Efectivo () {
+	}
+
+	public float calcDevolucion() {
+	}
+}
+
+class Transferencia extends Pago {
+	private String banco;
+	private String numCuenta;
+
+	public Transferencia() {
+	}
+
+	public String getBanco() {
+	}
+
+	public void setBanco(String banco) {
+	}
+
+	public String getNumCuenta() {
+
+	}
+
+	public void setNumCuenta(String numCuenta) {
+	}
+
+    public String toString() {
+        return super.toString() + ". Banco: " + banco + ". Numero de cuenta: " + numCuenta;
+    }
+}
+
+class Tarjeta extends Pago {
+	private String tipo;
+	private String numTransaccion;
+
+	public Tarjeta() {
+	}
+
+	public String getTipo() {
+	}
+
+	public void setTipo(String tipo) {
+	}
+
+	public String getNumTransaccion() {
+	}
+
+	public void setNumTransaccion(String numTransaccion) {
+	}
+
+    public String toString() {
+        return super.toString() + ". Tipo: " + tipo + ". Numero de Transaccion: " + numTransaccion;
+    }
+}
+>>>>>>> master

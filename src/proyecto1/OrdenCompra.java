@@ -17,6 +17,7 @@ class OrdenCompra {
                 this.estado = estado;
                 docTributario = dt;
 
+<<<<<<< HEAD
                 pagos = new ArrayList<Pago>();
 
                 pagos.add(p);
@@ -108,4 +109,25 @@ class OrdenCompra {
 
                 return str + "\n";
         }
+=======
+    public Date getFecha() {
+        return fecha;
+    }
+
+    public void setFecha(Date fecha) {
+        this.fecha = fecha;
+    }
+
+    public String getEstado() {
+        return estado;
+    }
+
+    public void setEstado(String estado) {
+        this.estado = estado;
+    }
+
+    public String toString() {
+        return "Fecha: " + fecha + ". Estado: " + " Detalle de la orden: " + detalleOrden.toString() + ". Documento Tributario: " + docTributario.toString();
+    }
+>>>>>>> master
 }

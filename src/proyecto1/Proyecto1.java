@@ -26,6 +26,7 @@ public class Proyecto1 {
             Tarjeta p2 = new Tarjeta(110f, fecha, "Debito", "168");
             Tarjeta p3 = new Tarjeta(30f, fecha, "Debito", "169");
 
+<<<<<<< HEAD
             OrdenCompra oc1 = new OrdenCompra(leo, fecha, "En reparto", b, 1, libro, p1);
             OrdenCompra oc2 = new OrdenCompra(clau, fecha, "En reparto", f1, 2, pelota, p2);
             OrdenCompra oc3 = new OrdenCompra(clau, fecha, "En reparto", f2, 6, marcador, p3);
@@ -33,5 +34,7 @@ public class Proyecto1 {
             System.out.println(oc1.toString());
             System.out.println(oc2.toString());
             System.out.println(oc3.toString());
+=======
+>>>>>>> master
     }
 }

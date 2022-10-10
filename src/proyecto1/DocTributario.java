@@ -1,8 +1,12 @@
 package proyecto1;
 
+<<<<<<< HEAD
 import java.util.Date;
 
 abstract class DocTributario {
+=======
+abstract public class DocTributario {
+>>>>>>> master
     private String numero, rut;
     private Date fecha;
 
