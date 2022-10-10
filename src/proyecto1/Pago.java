@@ -28,11 +28,9 @@ class Pago {
 	}
 
 	public String toString() {
-<<<<<<< HEAD
                 return "    Monto: " + monto + "\n    Fecha: " + fecha + "\n";
         }
 }
-=======
         return "Monto: " + monto + ". Fecha: " + fecha;
     }
 }
@@ -93,4 +91,3 @@ class Tarjeta extends Pago {
         return super.toString() + ". Tipo: " + tipo + ". Numero de Transaccion: " + numTransaccion;
     }
 }
->>>>>>> master
